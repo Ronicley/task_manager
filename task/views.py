@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.conf.urls import url
 from django.contrib import admin
 from django.http import HttpResponse
-class tarefa(object):
+
+class Tarefa(object):
     titulo=None
     data=None
     def __init__(self, titulo, data):

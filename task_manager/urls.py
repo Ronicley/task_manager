@@ -23,11 +23,13 @@ def home(request):
     return HttpResponse("<center><h1>Olá caraio</h1></center>")
 def Sobre(request):
     return HttpResponse("<center><h1>Ronicley</h1></center>")
-def tarefa(request, ano,mes):
+def tarefa(request, ano,mes, dia):
     return HttpResponse("<center><br><br><br><br>"+"<h1>tarefa: </h1>"+"<h1>"+str(ano)+"/"+str(mes)+"</h1>"+"</br></br></br></center>")
+
 urlpatterns = [
     url(r'^home/', home),
     url(r'^Sobre/', Sobre),
     #url(r'^tarefa/([0-9]{4})/', tarefa),
-    url(r'^tarefa/(?P<ano>[0-9]{4})/(?P<mes>[0-9]{2})/', tarefa),
+    url(r'^tarefa/(?P<ano>[0-9]{4})/(?P<mes>[0-9]{2})/(?P<dia>[0-9]{2})/', tarefa),
+
 ]
