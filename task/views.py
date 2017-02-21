@@ -11,9 +11,10 @@ class Tarefa(object):
         data=data
     def __str__(self):
         return self.titulo
+
 def home(request):
     return HttpResponse("<center><h1>Olá caraio</h1></center>")
 def Sobre(request):
     return HttpResponse("<center><h1>Ronicley</h1></center>")
 def tarefa(request, ano,mes):
-    return HttpResponse("<center><br><br><br><br>"+"<h1>tarefa: </h1>"+"<h1>"+str(ano)+"/"+str(mes)+"</h1>"+"</br></br></br></center>")
+    return HttpResponse("<center><br><br><br><br>"+"<h1>tarefa: </h1>"+"<h1>"+str(ano)+"/"+str(mes)+"</h1>"+"/"+str(dia)+"</h1>"+"</br></br></br></center>")
