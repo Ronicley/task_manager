@@ -24,7 +24,7 @@ def home(request):
 def Sobre(request):
     return HttpResponse("<center><h1>Ronicley</h1></center>")
 def tarefa(request, ano,mes, dia):
-    return HttpResponse("<center><br><br><br><br>"+"<h1>tarefa: </h1>"+"<h1>"+str(ano)+"/"+str(mes)+"</h1>"+"</br></br></br></center>")
+    return HttpResponse("<center><br><br><br><br>"+"<h1>tarefa: </h1>"+"<h1>"+str(ano)+"/"+str(mes)+"</h1>"+"/"+str(dia)+"</h1>"+"</br></br></br></center>")
 
 urlpatterns = [
     url(r'^home/', home),
